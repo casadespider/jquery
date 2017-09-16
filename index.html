@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script src="https://code.jquery.com/jquery-1.12.3.min.js" integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ=" crossorigin="anonymous"></script>
+  <script src="js/script.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <title>The Complete jQuery Course - Project Structure</title>
+</head>
+<body>
+  <div id="content">
+    <h1>The Complete jQuery Course - Project Structure</h1>
+
+    <div class="red-box">Red</div>
+    <div class="green-box">Green</div>
+    <div class="blue-box">Blue</div>
+    <div class="clear"></div>
+
+    <h2>Hi, I'm the Base Project!</h2>
+    <p>Add elements here as you like to try out jQuery. This is your playground to test out anything that comes into your mind.</p>
+    <p><strong>OR:</strong> Copy this project structure into a new directory first to create separate playgrounds for animations, manipulations, event handlers etc.</p>
+
+    <div>
+      <h3>Animation</h3>
+      <ol>
+        <li>fadeIn(speed)</li>
+        <li>fadeOut(speed)</li>
+        <li>fadeTo(speed,opacity)</li>
+        <li>fadeToggle(speed)</li>
+        <li>show(speed)</li>
+        <li>hide(speed)</li>
+        <li>slideUp(speed)</li>
+        <li>slideDown(speed)</li>
+        <li>slideToggle(speed)</li>
+      </ol>  
+
+      <h3>Custom Animation</h3>
+      <pre>
+        $(".blue-box").animate({
+          "margin-left": "200px",
+          "opacity": "0",
+          "height": "50px",
+          "margin-top": "25px"
+        }, 1500, "linear");
+  
+        $("p").animate({
+          "font-size": "20px"
+        }, 1000); 
+
+        $(".red-box").fadeTo(2000,0.2);
+        $(".green-box").delay(1000).fadeTo(2000,0.5);
+        $(".blue-box").delay(2000).fadeTo(2000,0.8).fadeOut().delay(1500).fadeIn();
+
+        $(".red-box").fadeTo(2000,0.5, function() {
+          $(".green-box").fadeTo(2000,0.5, function() {
+            $(".blue-box").fadeTo(2000,0.5);  
+          });
+        });  
+      </pre>       
+    </div>  
+  </div>
+</body>
+</html>
