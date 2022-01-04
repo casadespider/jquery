@@ -1,0 +1,15 @@
+{
+    "people": [{
+            "name": "Alyssa",
+            "email": "alyssa@gmail.com"
+        },
+        {
+            "name": "DeeDee",
+            "email": "deedee@gmail.com"
+        },
+        {
+            "name": "Richard",
+            "email": "richard@gmail.com"
+        }
+    ]
+}
